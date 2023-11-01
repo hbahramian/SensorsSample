@@ -32,7 +32,8 @@ class LightSensorFragment : Fragment() {
         _binding = FragmentLightSensorBinding.inflate(inflater, container, false)
         val view = binding.root
         val viewModel : SensorViewModel by activityViewModels()
-        viewModel.initializeSensors(LightSensor(this.requireContext()))
+        viewModel.initializeSensors(LightSensor(this.requireContext())
+                                    , AccelerometerSensor(this.requireContext()))
         binding.lifecycleOwner = viewLifecycleOwner
 
         viewModel.isDark.observe(viewLifecycleOwner, Observer {
