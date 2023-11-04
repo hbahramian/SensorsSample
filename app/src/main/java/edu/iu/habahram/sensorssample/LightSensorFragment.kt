@@ -1,7 +1,6 @@
 package edu.iu.habahram.sensorssample
 
 import android.graphics.Color
-import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,7 +20,6 @@ class LightSensorFragment : Fragment() {
     private val TAG = "MainActivity"
     private var _binding: FragmentLightSensorBinding? = null
     private val binding get() = _binding!!
-    private lateinit var sensorManager: SensorManager
 
 
     override fun onCreateView(
@@ -32,8 +30,7 @@ class LightSensorFragment : Fragment() {
         _binding = FragmentLightSensorBinding.inflate(inflater, container, false)
         val view = binding.root
         val viewModel : SensorViewModel by activityViewModels()
-        viewModel.initializeSensors(LightSensor(this.requireContext())
-                                    , AccelerometerSensor(this.requireContext()))
+        viewModel.initializeSensors(this.requireContext())
         binding.lifecycleOwner = viewLifecycleOwner
 
         viewModel.isDark.observe(viewLifecycleOwner, Observer {

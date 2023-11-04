@@ -27,3 +27,11 @@ class AccelerometerSensor(
     sensorFeature = PackageManager.FEATURE_SENSOR_ACCELEROMETER,
     sensorType = Sensor.TYPE_ACCELEROMETER
 )
+
+class MagneticFiledSensor(
+    context: Context
+): AndroidSensor(
+    context = context,
+    sensorFeature = PackageManager.FEATURE_SENSOR_ACCELEROMETER,
+    sensorType = Sensor.TYPE_MAGNETIC_FIELD
+)

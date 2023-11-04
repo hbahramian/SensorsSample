@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">SensorsSample</string>
+    <string name="app_name">Sensors Sample</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location_error_msg">Unable to retrieve location. Location required for magnetic declination</string>
+    <string name="not_available">N/A</string>
+    <string name="magnetic_declination">Magnetic Declination\n%.1f°</string>
+    <string name="true_heading">True Heading\n%d°</string>
+    <string name="heading">\n%d°</string>
 </resources>
