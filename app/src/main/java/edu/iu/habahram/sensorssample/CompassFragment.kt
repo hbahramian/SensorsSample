@@ -110,7 +110,7 @@ class CompassFragment : Fragment() {
                         CompassHelper.calculateMagneticDeclination(latitude.toDouble(),
                             longitude.toDouble(), altitude.toDouble()
                         )
-                    binding.textViewMagneticDeclination.text = "Magnetic Declination\\n$magneticDeclination"
+                    //binding.textViewMagneticDeclination.text = "Magnetic Declination:$magneticDeclination"
                 }
 
         }
